@@ -1,8 +1,8 @@
 // ai.js 
-const { GoogleGenerativeAI } = require("@google/genai"); // Use GoogleGenAI
+const { GoogleGenAI } = require("@google/genai"); // Use GoogleGenAI
 
 // The client gets the API key from the environment variable `GEMINI_API_KEY`.
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY); // Use GoogleGenerAI
+const genAI = new GoogleGenAI(process.env.GEMINI_API_KEY); // Use GoogleGenerAI
 
 /**
  * NEW: Helper function to find the top scorer(s) from a lineup array.
