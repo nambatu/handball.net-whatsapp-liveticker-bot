@@ -80,12 +80,12 @@ async function extractGameStats(lineupData, teamNames) {
     // Format the stats into a string message
     const statsMessage = `📊 *Statistiken zum Spiel:*\n` +
                          `-----------------------------------\n` +
-                         `*Topscorer (${teamNames.home}):* ${gameStats.homeTopScorer}\n` +
-                         `*Topscorer (${teamNames.guest}):* ${gameStats.guestTopScorer}\n` +
-                         `*7-Meter (${teamNames.home}):* ${gameStats.homeSevenMeters}\n` +
-                         `*7-Meter (${teamNames.guest}):* ${gameStats.guestSevenMeters}\n` +
-                         `*Zeitstrafen (${teamNames.home}):* ${gameStats.homePenalties}\n` +
-                         `*Zeitstrafen (${teamNames.guest}):* ${gameStats.guestPenalties}`;
+                         `Topscorer (${teamNames.home}):* ${gameStats.homeTopScorer}\n` +
+                         `Topscorer (${teamNames.guest}):* ${gameStats.guestTopScorer}\n` +
+                         `7-Meter (${teamNames.home}):* ${gameStats.homeSevenMeters}\n` +
+                         `7-Meter (${teamNames.guest}):* ${gameStats.guestSevenMeters}\n` +
+                         `Zeitstrafen (${teamNames.home}):* ${gameStats.homePenalties}\n` +
+                         `Zeitstrafen (${teamNames.guest}):* ${gameStats.guestPenalties}`;
     
     return statsMessage;
 }
