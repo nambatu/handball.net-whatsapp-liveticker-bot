@@ -104,7 +104,7 @@ client.on('message', async msg => {
     const groupName = chat.name;          
 
     // --- !start Command ---
-    if (command === '!start' && args.length >= 2) {
+    if (command === '!start1' && args.length >= 2) {
         if (activeTickers.has(chatId) && (activeTickers.get(chatId).isPolling || activeTickers.get(chatId).isScheduled)) {
             await msg.reply('In dieser Gruppe läuft oder ist bereits ein Live-Ticker geplant. Stoppen oder resetten Sie ihn zuerst.');
             return;
@@ -121,7 +121,7 @@ client.on('message', async msg => {
         }
     }
     // --- !stop Command ---
-    else if (command === '!stop') {
+    else if (command === '!stop1') {
         const tickerState = activeTickers.get(chatId);
         let wasStopped = false; 
 
@@ -153,7 +153,7 @@ client.on('message', async msg => {
         }
     }
     // --- !reset Command ---
-    else if (command === '!reset') {
+    else if (command === '!reset1') {
         const tickerState = activeTickers.get(chatId);
 
         if (tickerState) {
@@ -178,7 +178,7 @@ client.on('message', async msg => {
         console.log(`Ticker-Daten für Gruppe "${groupName}" (${chatId}) wurden manuell zurückgesetzt.`);
     }
     // --- Handle !start command without a URL ---
-    else if (command === '!start') {
+    else if (command === '!start1') {
         await msg.reply(`Fehler: Bitte geben Sie eine gültige URL an. Format:\n\n!start <URL> [recap]`);
     }
 });
